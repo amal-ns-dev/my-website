@@ -248,6 +248,7 @@ body {
 .code-string { color: var(--blue); }
 .code-comment { color: #5c6370; font-style: italic; }
 .code-variable { color: #e06c75; }
+.code-variable-white { color: #fff; }
 
 .code-block {
     overflow-x: auto;
