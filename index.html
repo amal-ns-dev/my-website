@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amal NS</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="./assets/fontawesome-free/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Title bar -->
+    <header class="title-bar">
+        <span>amal-ns-portfolio</span>
+        <div class="window-controls">
+            <span class="win-dot dot-green"></span>
+            <span class="win-dot dot-yellow"></span>
+            <span class="win-dot dot-red"></span>
+        </div>
+    </header>
+
+    <!-- Mobile navigation -->
+    <div class="mobile-nav">
+        <span>📁 amal-ns-portfolio</span>
+        <button class="btn btn-sm btn-outline-secondary text-light border-0" onclick="toggleSidebar()">
+            <i class="fa-solid fa-bars fs-5"></i>
+        </button>
+    </div>
+
+    <main class="workspace">
+
+        <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebar()"></div>
+
+        <!-- Explorer -->
+        <aside class="sidebar" id="appSidebar">
+            <div class="sidebar-header">Explorer: portfolio</div>
+            <div class="tree-folder">📁 src/</div>
+            <nav>
+                <div class="tree-file active" data-tab="home" onclick="switchTab('home')">
+                    <i class="fa-brands fa-js file-icon js-icon"></i> home.js
+                </div>
+                <div class="tree-file" data-tab="about" onclick="switchTab('about')">
+                    <i class="fa-solid fa-code file-icon json-icon"></i> about.json
+                </div>
+                <div class="tree-file" data-tab="contact" onclick="switchTab('contact')">
+                    <i class="fa-brands fa-js file-icon js-icon"></i> contact.js
+                </div>
+                <div class="tree-file" data-tab="experience" onclick="switchTab('experience')">
+                    <i class="fa-brands fa-js file-icon js-icon"></i> experience.js
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Editor -->
+        <section class="editor-area">
+
+            <!-- Tabs -->
+            <div class="editor-tabs">
+                <button class="editor-tab active" data-tab="home" onclick="switchTab('home')">
+                    <i class="fa-brands fa-js file-icon js-icon"></i> home.js
+                </button>
+                <button class="editor-tab" data-tab="about" onclick="switchTab('about')">
+                    <i class="fa-solid fa-code file-icon json-icon"></i> about.json
+                </button>
+                <button class="editor-tab" data-tab="contact" onclick="switchTab('contact')">
+                    <i class="fa-brands fa-js file-icon js-icon"></i> contact.js
+                </button>
+                <button class="editor-tab" data-tab="experience" onclick="switchTab('experience')">
+                    <i class="fa-brands fa-js file-icon js-icon"></i> experience.js
+                </button>
+            </div>
+
+            <div class="breadcrumbs" id="breadcrumb-path">
+                portfolio &gt; src &gt; home.js
+            </div>
+
+            <!-- Home -->
+            <div class="editor-content active" id="content-home">
+                <div class="hero-section">
+                    <p class="hero-greeting">Hi, all 👋</p>
+                    <h1 class="hero-title">
+                        I'm <span class="highlight">Amal NS</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Backend Developer</h2>
+                    <p class="hero-description">
+                        I design and develop scalable backend applications,
+                        robust REST APIs, and efficient database architectures.
+                        Passionate about solving complex problems, building
+                        reliable systems, and turning ideas into practical
+                        software solutions.
+                    </p>
+                    <div class="my-4">
+                        <span class="skill-badge">JavaScript/TypeScript</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Express.js</span>
+                        <span class="skill-badge">MongoDB/SQL</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">PHP</span>
+                        <span class="skill-badge">Git</span>
+                    </div>
+                    <button class="btn btn-yellow mt-3" onclick="switchTab('contact')">
+                        Connect →
+                    </button>
+                    <p class="code-comment mt-5">
+                        // Becoming better than yesterday, one day at a time. 
+                    </p>
+                </div>
+            </div>
+
+            <!-- About -->
+            <div class="editor-content" id="content-about">
+                <p class="code-comment mb-4">
+                    // 🧩 Driven by problem-solving & thoughtful design.<br>
+                    // 🛠️ Focused on writing clean, maintainable, reliable code.<br>
+                    // ✨ Always learning, building, and refining my craft.
+                </p>
+                <div class="code-block">
+                    <span class="code-keyword">const</span>
+                    <span class="code-variable">TechnicalExpertise</span> = {
+                    <div class="ps-3 ps-md-4">
+                        <div><span class="code-variable">"programmingLanguages"</span>:
+                            <span class="code-string">["JavaScript", "TypeScript", "PHP", "Python", "Golang"]</span>,
+                        </div>
+                        <div><span class="code-variable">"backendAndFrameworks"</span>:
+                            <span class="code-string">["Node.js", "Express.js", "Laravel", "CodeIgniter", "Django"]</span>,
+                        </div>
+                        <div><span class="code-variable">"databaseAndCaching"</span>:
+                            <span class="code-string">["MongoDB", "MySQL", "PostgreSQL", "Redis"]</span>,
+                        </div>
+                        <div><span class="code-variable">"toolsAndTechnologies"</span>:
+                            <span class="code-string">["Git", "GitHub", "GitHub Copilot", "Docker", "Linux"]</span>
+                        </div>
+                        <div><span class="code-variable">"frontendAndFrameworks"</span>:
+                            <span class="code-string">["HTML", "CSS", "React"]</span>
+                        </div>
+                    </div>
+                    };
+                </div>
+
+                <p class="code-comment mt-2">
+                    /* 
+                       <br><strong>💡 Engineering Philosophy </strong> <br>
+                        &nbsp;&nbsp; I believe good software engineering goes beyond making things work. <br>
+                        &nbsp;&nbsp; It's about understanding problems, choosing appropriate solutions, writing maintainable code, <br>
+                        &nbsp;&nbsp; and building systems that are easy to understand, extend, and improve. <br>
+                        &nbsp;&nbsp; I'm particularly interested in the principles and practices that make software reliable,
+                        scalable, and maintainable over time. <br>
+                    */
+                </p>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="editor-content" id="content-contact">
+                <p class="code-comment">// Social Profiles</p>
+                <div class="mt-4 code-block">
+                    <span class="code-keyword">const</span> socialLinks = {
+                    <div class="ps-3 ps-md-4">
+                        <div>
+                            <span class="code-variable">github</span>:
+                            <a href="https://github.com/amal-ns-dev" target="_blank" rel="noopener noreferrer" class="social-link">
+                                "https://github.com/amal-ns-dev"
+                            </a>,
+                        </div>
+                        <div>
+                            <span class="code-variable">linkedin</span>:
+                            <a href="https://www.linkedin.com/in/amal-ns-dev/" target="_blank" rel="noopener noreferrer" class="social-link">
+                                "https://www.linkedin.com/in/amal-ns-dev/"
+                            </a>
+                        </div>
+                        <div>
+                            <span class="code-variable">email</span>:
+                            <a href="mailto:nsamal.dm@gmail.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                "nsamal.dm@gmail.com"
+                            </a>
+                        </div>
+                    </div>
+                    };
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="editor-content" id="content-experience">
+                <p class="code-comment">// Professional Experience</p>
+                <div class="mt-4">
+                    <span class="code-keyword">const</span>
+                    <span class="code-variable">prevExperience</span> = [
+                    <div class="ps-3 ps-md-4 mt-4">
+                        <div class="experience-item">
+                            <h5 class="fw-semibold">Software Engineer</h5>
+                            <p>Digiora Technologies Pvt Ltd, Kochi, Kerala</p>
+                            <small>May 2024 - August 2026</small>
+                            <ul class="text-secondary mt-3 ps-3">
+                                <li>
+                                    Maintained, optimized, and extended a feature-rich
+                                    chatbot for automated customer interaction.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="experience-item secondary">
+                            <h5 class="fw-semibold">Software Engineer</h5>
+                            <p>Softx Technologies, Kalamassery, Kerala</p>
+                            <small>January 2022 - February 2024</small>
+                            <ul class="text-secondary mt-3 ps-3">
+                                <li class="mb-2">
+                                    Developed and delivered multiple web applications,
+                                    including a hotel room booking platform and a
+                                    restaurant billing system.
+                                </li>
+                                <li>
+                                    Designed and developed scalable backend REST APIs
+                                    using NestJS, ensuring secure and efficient
+                                    data handling.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    ];
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Status bar -->
+    <footer class="status-bar">
+        <div class="status-group">
+            <span>⚡ main*</span>
+            <span>0 errors, 0 warnings</span>
+        </div>
+        <div class="status-group status-right">
+            <span>JavaScript / Node.js</span>
+            <span>UTF-8</span>
+            <span>Ln 1, Col 1</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="./assets/js/bootstrap.js"></script>
+
+    <!-- Custom CSS -->
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
