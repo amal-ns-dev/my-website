@@ -1,4 +1,4 @@
-# Amal NS Portfolio
+# Portfolio
 
 A lightweight personal portfolio website built as a static HTML/CSS/JavaScript project with a code-editor inspired UI.
 
